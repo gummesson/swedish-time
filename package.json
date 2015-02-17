@@ -34,11 +34,11 @@
   "scripts": {
     "start": "npm install && npm run setup && npm run dist",
     "setup": "rm -rf dist && mkdir dist",
-    "serve": "http-server -p 5555 dist/",
     "dist": "npm run js && npm run css && npm run html",
     "js": "browserify -t babelify -g uglifyify -e src/js/index.js > dist/index.js",
     "css": "cssnext -c src/css/index.css > dist/index.css",
     "html": "cp -r src/*.html dist/",
+    "serve": "http-server -p 5555 dist/",
     "deploy": "git subtree push --prefix dist origin gh-pages"
   }
 }
