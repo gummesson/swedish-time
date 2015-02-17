@@ -1,0 +1,70 @@
+@import "normalize.css/normalize";
+
+:root {
+  --colorRed:   #c30771;
+  --colorWhite: #f1f1f1;
+  --colorBlack: #212121;
+}
+
+:root {
+  --colorFg: var(--colorWhite);
+  --colorBg: var(--colorRed);
+}
+
+:root {
+  --fontSize:   3rem;
+  --fontFamily: "Montserrat", sans-serif;
+}
+
+@custom-media --mediaLap      (min-width: 481px);
+@custom-media --mediaDesk     (min-width: 1024px);
+@custom-media --mediaDeskWide (min-width: 1600px);
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: var(--colorFg);
+  color: var(--colorBg);
+}
+
+html {
+  height: 100%;
+  background-color: var(--colorBg);
+  color: var(--colorFg);
+  font: 400 1em/1.5 var(--fontFamily);
+}
+
+body {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.wrap {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.data {
+  font-size: var(--fontSize);
+}
+@media (--mediaLap) {
+  .data {
+    font-size: calc(var(--fontSize) * 2);
+  }
+}
+@media (--mediaDesk) {
+  .data {
+    font-size: calc(var(--fontSize) * 3);
+  }
+}
+@media (--mediaDeskWide) {
+  .data {
+    font-size: calc(var(--fontSize) * 4);
+  }
+}
