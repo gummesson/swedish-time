@@ -38,6 +38,10 @@ html {
   font: 400 1em/1.5 var(--fontFamily);
 }
 
+a {
+  color: inherit;
+}
+
 .center {
   position: absolute;
   top: 0;
@@ -67,4 +71,13 @@ html {
   .data {
     font-size: calc(var(--fontSize) * 4);
   }
+}
+
+.foot {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: color(var(--colorBg) tint(50%));
+  text-align: center;
 }
